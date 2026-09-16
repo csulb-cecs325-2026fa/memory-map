@@ -20,7 +20,7 @@ endif()
 find_package(GTest CONFIG REQUIRED)
 
 add_executable(instructor_tests
-  src/instructor_tests.cpp
+  src/memorymap_tests.cpp
   "${REPO_ROOT}/src/memorymap.cpp"
 )
 
