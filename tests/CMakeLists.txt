@@ -19,18 +19,18 @@ endif()
 
 find_package(GTest CONFIG REQUIRED)
 
-add_executable(memorymap_tests
-  src/memorymap_tests.cpp
+add_executable(instructor_tests
+  src/instructor_tests.cpp
   "${REPO_ROOT}/src/memorymap.cpp"
 )
 
 # Compile only the assignment implementation; GTest supplies the test main().
-target_link_libraries(memorymap_tests PRIVATE GTest::gtest_main)
-target_include_directories(memorymap_tests PRIVATE
+target_link_libraries(instructor_tests PRIVATE GTest::gtest_main)
+target_include_directories(instructor_tests PRIVATE
   "${CMAKE_CURRENT_SOURCE_DIR}/include"
   "${REPO_ROOT}/include"
 )
-target_compile_features(memorymap_tests PRIVATE cxx_std_20)
+target_compile_features(instructor_tests PRIVATE cxx_std_20)
 
 include(GoogleTest)
-gtest_discover_tests(memorymap_tests)
+gtest_discover_tests(instructor_tests)
