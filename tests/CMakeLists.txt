@@ -19,6 +19,8 @@ endif()
 
 find_package(GTest CONFIG REQUIRED)
 
+enable_testing()
+
 add_executable(instructor_tests
   src/memorymap_tests.cpp
   "${REPO_ROOT}/src/memorymap.cpp"
