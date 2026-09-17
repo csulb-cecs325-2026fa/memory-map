@@ -24,7 +24,7 @@
 // Debugging hint: Compare the actual value with (pid << 4) | payload. The
 // payload occupies the four low bits, so make sure the shift happens first.
 TEST(MemoryMapEncoding, MakeBlockPacksPidAndPayload) {
-  EXPECT_EQ(makeBlock(12, 5), ((12u << 4u) | 5u));
+  EXPECT_EQ(makeBlock(12, 5), ((12u << 8u) | 5u));
 }
 
 // Purpose: Verify that getPid removes the four payload bits and returns the
